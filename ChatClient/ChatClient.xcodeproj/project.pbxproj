@@ -13,6 +13,8 @@
 		385812201A46756B00FF4BDF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3858121F1A46756B00FF4BDF /* Images.xcassets */; };
 		385812231A46756B00FF4BDF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 385812211A46756B00FF4BDF /* LaunchScreen.xib */; };
 		3858122F1A46756B00FF4BDF /* ChatClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3858122E1A46756B00FF4BDF /* ChatClientTests.swift */; };
+		38E336281A4EA18800435807 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E336271A4EA18800435807 /* ChatViewController.swift */; };
+		38E3362A1A4EAA9000435807 /* MessageEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E336291A4EAA9000435807 /* MessageEngine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		385812281A46756B00FF4BDF /* ChatClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3858122D1A46756B00FF4BDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3858122E1A46756B00FF4BDF /* ChatClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatClientTests.swift; sourceTree = "<group>"; };
+		38E336271A4EA18800435807 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatViewController.swift; path = ../ChatViewController.swift; sourceTree = "<group>"; };
+		38E336291A4EAA9000435807 /* MessageEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageEngine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 			children = (
 				385812181A46756B00FF4BDF /* AppDelegate.swift */,
 				3858121A1A46756B00FF4BDF /* ViewController.swift */,
+				38E336291A4EAA9000435807 /* MessageEngine.swift */,
+				38E336271A4EA18800435807 /* ChatViewController.swift */,
 				3858121C1A46756B00FF4BDF /* Main.storyboard */,
 				3858121F1A46756B00FF4BDF /* Images.xcassets */,
 				385812211A46756B00FF4BDF /* LaunchScreen.xib */,
@@ -213,6 +219,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3858121B1A46756B00FF4BDF /* ViewController.swift in Sources */,
+				38E3362A1A4EAA9000435807 /* MessageEngine.swift in Sources */,
+				38E336281A4EA18800435807 /* ChatViewController.swift in Sources */,
 				385812191A46756B00FF4BDF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

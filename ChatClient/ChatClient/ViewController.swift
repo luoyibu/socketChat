@@ -8,31 +8,18 @@
 
 import UIKit
 
-class ViewController: UIViewController, NSStreamDelegate {
+class ViewController: UIViewController {
 
     @IBOutlet weak var nameInput: UITextField!
-    var inputStream: NSInputStream?
-    var outputStream: NSOutputStream?
     
     @IBAction func joinChat(sender: UIButton) {
-        let response = self.nameInput.text
-        let data = NSData(data: response.dataUsingEncoding(NSASCIIStringEncoding, allowLossyConversion: true)!)
-        self.outputStream?.write(data.bytes, maxLength: data.length)
-    }
-    
-    func initNetworkCommunication() {
-        NSStream.getStreamsToHostWithName("localhost", port: 80, inputStream: &self.inputStream, outputStream: &self.outputStream)
-        self.inputStream?.delegate = self
-        self.outputStream?.delegate = self
-        self.inputStream?.scheduleInRunLoop(NSRunLoop.currentRunLoop(), forMode: NSDefaultRunLoopMode)
-        self.outputStream?.scheduleInRunLoop(NSRunLoop.currentRunLoop(), forMode: NSDefaultRunLoopMode)
-        self.inputStream?.open()
-        self.outputStream?.open()
+        let response = "iam:" + self.nameInput.text
+        let msgEngine = MessageEngine.getInstance()
+        msgEngine.sendMessage(response)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.initNetworkCommunication()
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,8 +27,5 @@ class ViewController: UIViewController, NSStreamDelegate {
 
     }
 
-    func stream(aStream: NSStream, handleEvent eventCode: NSStreamEvent) {
-        
-    }
 }
 
